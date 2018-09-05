@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [FreeCRM Application Test Automation test suit]">
+  <listeners>
+    <listener class-name="com.qa.extentReportListner.ExtentReportListner"/>
+  </listeners>
+  <test thread-count="5" name="Free CRM App Tesrr Cases(failed)">
+    <classes>
+      <class name="com.crm.qa.testCases.HomePageTest">
+        <methods>
+          <include name="verifyUserNameTest"/>
+          <include name="verifyContactsLinkTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.crm.qa.testCases.HomePageTest -->
+      <class name="com.crm.qa.testCases.LoginPageTest">
+        <methods>
+          <include name="crmLogoImgTest"/>
+          <include name="logInTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.crm.qa.testCases.LoginPageTest -->
+      <class name="com.crm.qa.testCases.ContactPageTest">
+        <methods>
+          <include name="SelectContactsTest"/>
+          <include name="tearDown"/>
+          <include name="validateCreateNewContactTest"/>
+          <include name="setUp"/>
+          <include name="validateCreatenewContactTest"/>
+          <include name="verifyTypeOfdataTest"/>
+        </methods>
+      </class> <!-- com.crm.qa.testCases.ContactPageTest -->
+    </classes>
+  </test> <!-- Free CRM App Tesrr Cases(failed) -->
+</suite> <!-- Failed suite [FreeCRM Application Test Automation test suit] -->
