@@ -12,22 +12,26 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.TestUtil;
 import com.crm.qa.util.WebEventListner;
+
+
 //read from properties file
 public class TestBase {
 	
 	public static WebDriver driver;
 	public static Properties prop;
 	public static WebEventListner eventListner;
+
 	public TestBase() throws IOException
 	{
 		prop=new Properties();
-		FileInputStream ip=new FileInputStream("D:\\PJ\\Pallabi\\Vertivco\\DemoforMaven\\src\\main\\"
-		+"java\\com\\crm\\qa\\config\\config.properties");
+		FileInputStream ip=new FileInputStream("C:\\Users\\pallabita.jena.ITLINFOSYS\\git\\repository\\DemoforMaven\\src\\main\\java\\com\\crm\\qa\\config\\config.properties");
 		prop.load(ip);
+		
 	}
 	public static void intialization() throws IOException
 	{
 		String pBrowser= prop.getProperty("browser");
+		
 		EventFiringWebDriver eDriver;
 		
 		if(pBrowser.equals("chrome"))
